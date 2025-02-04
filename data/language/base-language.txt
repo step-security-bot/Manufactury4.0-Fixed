@@ -1,0 +1,218 @@
+
+
+########################### From Recycling 4.0 mod, made by RecycleBin
+
+object_R4_SuperCompost							 Super Compost
+
+
+
+########################### PLANTATION OBJECTS
+
+object_M4_CottonSeed								 Cotton Seeds
+object_M4_CottonCompost								 Cotton Compost
+object_M4_CottonFertilizer							 Cotton Fertilizer
+object_M4_CottonDDT									 DDT
+object_M4_RawCotton									 Raw Cotton
+
+equipment_M4_DDTSprayer								 DDT Sprayer
+
+object_M4_CottonPlant								 Cotton Plant
+tooltip_M4_PlantSeed								 \nControl ID: *X\n\nA new seed will soon be planted.
+tooltip_M4_PlantStatus								 \nControl ID: *X\n\nType: *A\n\nFAST GROW: *L\n\nAge: *B hours *C minutes\nHarvest Hour: *D\n\nNeeds tending: *E\nNeeds water: *F\nNeeds DDT: *G\nNeeds fertilizer: *H\nNeeds pruning: *I\n\nReady to harvest: *J\nRemaining harvest: *Kx
+tooltip_M4_need_CottonControl						 This cotton plant needs a Plantation Control before it can grow.\nThe Plantation Control has to be placed within 29 tiles of this plant.\n\nPress the " FIND NEW PLANTS " button on the Plantation Control to activate this plant.
+tooltip_M4_Need_Compost								 Cotton Plants need to be planted in Compost before they will grow and produce cotton.\nYou will find it in the Materials menu.
+
+object_M4_CottonPlantSpawner						 Cotton Plant
+buildtoolbar_popup_obj_M4_CottonPlantSpawner		 Cotton Plants need to be planted in Compost (from the Materials menu) before they will grow.\n\nRequires a Plantation Control within 29 tiles.\n\nThe Plantation Control in your Cotton Plantation will control the harvest.\n\nPress the " FIND NEW PLANTS " button on the Plantation Control to activate this plant.
+
+object_M4_CottonAreaCovered							 Covered Plants Area
+tooltip_M4_CoveredPlantArea							 Covered Plants Area
+
+object_M4_PlantationControl							 Plantation Control
+object_M4_PlantationControlSpawner					 Plantation Control
+buildtoolbar_popup_obj_M4_PlantationControlSpawner	 Place this Control unit in the centre of your Cotton Plantation.\n\nPress " FIND NEW PLANTS " to scan for Cotton Plants within a range of 3-29 square tiles.\n\nYou can place several control units in one Plantation, all managing their own little batch of Cotton Plants placed around them.\n\nUse my buttons to configure harvest times and range.\n\nDefault random harvest:\n -do nothing, Cotton Plants will grow for 24 hours\n -age gets reset once a harvest job is completed\n -this will result in random harvest times\n\nTo control harvest by HarvestHour:\n -press the buttons to change the hour\n -when hour is set to 0:00 then it's disabled\n\nTo control harvest by DoorTimer:\n -connect DoorTimer -> Plantation Control\n -can be done several times per day\n -set an 'Open' hour to activate a harvest job\n -set 'Closed' hour(s) in between job(s)
+tooltip_M4_CottonPlantNotManaged					 WARNING: no Plantation Control found\n\nThis Cotton Plant requires a Plantation Control within 3 to 29 tiles.\n\nThe Plantation Control in your Cotton Plantation will control the harvest.
+tooltip_M4_button_ScanArea							 FIND NEW POTS
+tooltip_M4_button_ChangeRangePlus					 Range (+)
+tooltip_M4_button_ShowHideRange						 Show/Hide: *Xm²
+tooltip_M4_button_ChangeRangeMinus					 Range (-)
+tooltip_M4_button_PlantType							 Type: *X
+tooltip_M4_button_ToggleLights						 Light: *X
+tooltip_M4_button_On								 On
+tooltip_M4_button_Night								 Night
+tooltip_M4_button_Off								 Off
+tooltip_M4_button_NeedsYes							 YES
+tooltip_M4_button_NeedsNo							 no
+tooltip_M4_button_Cotton							 Cotton
+tooltip_M4_SeparatorLine							 ==============
+tooltip_M4_button_HarvestHourPlus					 Hour (+)
+tooltip_M4_button_HarvestHourMinus					 Hour (-)
+tooltip_M4_button_HarvestHour						 Harvest: *X
+tooltip_M4_SeparatorWeather							 = WEATHER EVENT =
+tooltip_M4_button_ToggleLightning					 Lightning: *X
+tooltip_M4_PlantControl								 \nControl ID: *X\n\nHarvest Hour is at: *A\n\nFound *B plants to manage in *C tiles range\n\nSuper Compost available: *D\nGets produced by Recycle Bins.\nEnables faster grow time and production x2.\n\nTooltips and jobs are updated every 15 minutes.\n\nMost jobs are issued between 8am and 22pm,\nand some can continue through the night.
+tooltip_M4_PlantControlLightning					 \nControl ID: *X\n\nWARNING:\nA plant was struck by lightning!
+tooltip_M4_PlantStruck								 Struck by lightning!\nThis plant is dead and will be replaced soon
+tooltip_M4_PlantDead								 This plant is dead and will be replaced soon
+tooltip_M4_FastGrowYes								 YES\n...but ONLY if Harvest Hour ìs disabled
+tooltip_M4_FastGrowNo								 place a Recycle Bin and\nmake Green Garbage at Recycle Desk
+
+object_M4_CottonPrunedPlant							 Pruned Plant
+object_M4_CottonDeadPlant							 Dead Plant
+object_M4_CottonPlantStruck							 Struck Plant
+object_M4_LightningStrike							 Lightning Strike
+
+equipment_M4_Trowel									 Trowel
+equipment_M4_Pruners								 Pruners
+equipment_M4_Wateringcan							 Watering Can
+equipment_M4_DDT									 DDT
+
+object_M4_PlantationTable							 Plantation Table
+buildtoolbar_popup_obj_M4_PlantationTable			 This table stores Raw Cotton from your Cotton Plantation.
+
+
+
+
+
+########################### ROOMS REGARDING PLANTATION
+
+room_M4_CottonPlantation							 Cotton Plantation
+buildtoolbar_popup_room_M4_CottonPlantation			 The Cotton Plantation is where your prisoners are working hard for little to no money. They will tend, water and fertilize Cotton Plants until they are ready to harvest. And die from the DDT which they have to use every day. Raw Cotton goes to the Jeans Factory, but gets stored at a Plantation Table as well. A Plantation can only be outdoors.
+
+object_M4_PlantationControlSpawner5					 Prefab Plantation Control Spawner
+quickbuild_M4_CottonPlantation5x5					 Cotton Plantation (5x5)
+object_M4_PlantationControlSpawner7					 Prefab Plantation Control Spawner
+quickbuild_M4_CottonPlantation7x7					 Cotton Plantation (7x7)
+
+
+########################### PLANTATION STAFF MEMBERS
+
+object_M4_PlantationWorker							 Plantation Worker
+buildtoolbar_popup_staff_M4_PlantationWorker		 This workman is helping the prisoners at the Cotton Plantation and learns them how to deal with the plants.
+
+
+
+
+########################### FLOOR MATERIALS
+
+material_Farmland									 Compost
+material_Mud										 Mud
+material_LongGrass									 Long Grass
+
+
+
+
+########################### PLANTATION REFORM
+
+reformprogram_M4_Plantation							 Plantation
+reformprogram_M4_Plantation_text					 Teach your inmates how to cultivate cotton from a plantation.
+
+
+
+
+########################### PLANTATION GRANTS
+
+objective_Grant_M4_CottonPlantation					 Cotton Plantation
+objective_Grant_M4_CottonPlantation_description		 Build a Cotton Plantation for your prisoners
+objective_Grant_M4_CottonPlantation_Room			 Build a Cotton Plantation
+objective_Grant_M4_CottonPlantation_Control			 Place at least 1 Plantation Control
+objective_Grant_M4_CottonPlantation_Seeds			 Place 10 Cotton Plants around the Plantation Control
+objective_Grant_M4_CottonPlantation_Workermen		 Hire at least 2 Plantation Workers
+
+objective_Grant_M4_CottonProduction					 Cotton Production
+objective_Grant_M4_CottonProduction_description		 Produce Raw Cotton from your Cotton Plantation
+objective_Grant_M4_CottonProduction_Research		 First you must complete the Cotton Plantation grant
+objective_Grant_M4_CottonProduction_Passed			 Have 2 prisoners pass the Plantation reform program
+objective_Grant_M4_CottonProduction_Assigned		 Assign 2 prisoners to work at a Cotton Plantation
+objective_Grant_M4_CottonProduction_Produced		 Produce 2500 Raw Cotton
+
+
+
+
+########################### PLANTATION JOBS
+
+job_custom_M4_TendCottonPlant						 Tend cotton plant
+job_custom_M4_PlantCottonSeed						 Plant cotton seed
+job_custom_M4_HarvestCottonPlant					 Harvest cotton plant
+job_custom_M4_FertilizeCottonPlant					 Fertilize cotton plant
+job_custom_M4_WaterCottonPlant						 Water cotton plant
+job_custom_M4_RemoveDeadCottonPlant					 Remove dead cotton plant
+job_custom_M4_PruneCottonPlant						 Prune cotton plant
+job_custom_M4_DDTCottonPlant						 Spray DDT on cotton plant
+job_custom_M4_RemoveStruckCottonPlant				 Remove struck cotton plant
+
+job_custom_M4_SuperTendCottonPlant					 Treat plant with Super Compost
+
+
+
+
+
+########################### MANUFACTURY OBJECTS
+
+object_M4_Jeans										 Jeans
+object_M4_ClothSpool								 Spool of Cloth
+
+object_M4_ManufacturyTable							 Jeans Factory Table
+buildtoolbar_popup_obj_M4_ManufacturyTable			 This table stores products produced in the Jeans Factory.
+
+object_M4_SewingStation								 Sewing Station
+buildtoolbar_popup_obj_M4_SewingStation				 This workbench takes Spools of Cloth from the Textile Mills in order to make Jeans.
+
+object_M4_TextileMill								 Textile Mill
+buildtoolbar_popup_obj_M4_TextileMill				 This workbench turns Raw Cotton from the Cotton Plantation into processed Spools of Cloth.
+
+
+
+
+
+########################### ROOMS REGARDING MANUFACTURY
+
+room_M4_Manufactury									 Jeans Factory
+buildtoolbar_popup_room_M4_Manufactury				 Where prisoners operate expensive and dangerous machinery to produce sub-par goods for your profit.\n\nThis workshop will produce Jeans for exports. It requires Textile Mills to produce Spools of Cloth from Raw Cotton coming from your Cotton Plantation. Prisoners will make Jeans from it at a Sewing Station, after a Tailor learned them how to do it.
+
+
+########################### MANUFACTURY STAFF MEMBERS
+
+object_M4_Tailor									 Tailor
+buildtoolbar_popup_staff_M4_Tailor					 The tailor teaches prisoners how to make jeans at the Jeans Factory and helps making jeans.
+
+
+
+
+########################### MANUFACTURY REFORM
+
+reformprogram_M4_ManufacturyInduction				 Manufacture Safety Induction
+reformprogram_M4_ManufacturyInduction_text			 Safety first! Inmates must pass this course before they are permitted to work in the Jeans Factory.
+
+
+
+
+########################### MANUFACTURY GRANTS
+
+objective_Grant_M4_Manufactury						 Jeans Factory
+objective_Grant_M4_Manufactury_description			 Build a Jeans Factory for your prisoners
+objective_Grant_M4_Manufactury_Research				 First you must complete the Cotton Plantation grant
+objective_Grant_M4_Manufactury_Room					 Build a Jeans Factory
+objective_Grant_M4_Manufactury_TextileMill			 Place at least 1 Textile Mill
+objective_Grant_M4_Manufactury_SewingStation		 Place at least 1 Sewing Station
+objective_Grant_M4_Manufactury_Tailor				 Hire a Tailor
+
+objective_Grant_M4_JeansProduction					 Jeans Production
+objective_Grant_M4_JeansProduction_description		 Produce jeans from your Jeans Factory
+objective_Grant_M4_JeansProduction_Research			 First you must complete the Jeans Factory grant
+objective_Grant_M4_JeansProduction_Passed			 Have 2 prisoners pass the Manufacture Induction Program
+objective_Grant_M4_JeansProduction_Assigned			 Assign 2 prisoners to work at the Jeans Factory
+objective_Grant_M4_JeansProduction_Produced			 Produce 500 Jeans
+
+
+
+
+#research_M4_AdvancedManufactury					 Jeans Factory
+#researchtooltip_M4_AdvancedManufactury				 Unlocks the Jeans Factory room, where after passing the Manufacture Safety Induction reform program led by a workman prisoners can work Sewing Stations to produce blue jeans.
+#research_M4_Plantations							 Plantations
+#researchtooltip_M4_Plantations						 Allows you to place a Plantation in your prison so that you can grow Cotton for your Jeans Factory.
+
+
+
+
+

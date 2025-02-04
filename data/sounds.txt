@@ -1,0 +1,13 @@
+
+OBJECT CottonPlant
+	EVENT Lightning  
+		SOUNDNAME          Tazer_Fire_2a
+		SOURCETYPE         0
+		POSITIONTYPE       1
+		INSTANCETYPE       0
+		LOOPTYPE           0
+		MINDISTANCE        18.15
+		VOLUME             PARAMETER TypeFixedValue        9.23  UpdateOncePerLoop
+		FREQUENCY          PARAMETER TypeFixedValue        1.40  UpdateOncePerLoop
+	END
+END

@@ -1,0 +1,333 @@
+
+# FOR COTTON PLANTATION
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonSeed
+	Container			 M4_PlantationControl
+	Room				 M4_CottonPlantation
+	Distribution		 Nearest
+	MinSlotId			 0
+	MaxSlotId			 0
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationControl
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonSeed
+	Room				 M4_CottonPlantation
+	Distribution		 Random
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonCompost
+	Container			 M4_PlantationControl
+	Room				 M4_CottonPlantation
+	Distribution		 Nearest
+	MinSlotId			 1
+	MaxSlotId			 1
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonCompost
+	Room				 M4_CottonPlantation
+	Distribution		 Random
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonFertilizer
+	Container			 M4_PlantationControl
+	Room				 M4_CottonPlantation
+	Distribution		 Nearest
+	MinSlotId			 2
+	MaxSlotId			 2
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonFertilizer
+	Room				 M4_CottonPlantation
+	Distribution		 Random
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonDDT
+	Container			 M4_PlantationControl
+	Room				 M4_CottonPlantation
+	Distribution		 Nearest
+	MinSlotId			 3
+	MaxSlotId			 3
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonDDT
+	Room				 M4_CottonPlantation
+	Distribution		 Random
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+
+# FOR JEANS MANUFACTURY
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_Jeans
+	Container			 M4_ManufacturyTable
+	MinSlotId			 3
+	MaxSlotId			 4
+	Room				 M4_Manufactury
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 Nearest
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_Jeans
+	Room				 Exports
+	Distribution		 Nearest
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_ClothSpool
+	Container			 M4_SewingStation
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 NonCompeting
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_ClothSpool
+	Container			 M4_SewingStation
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 OutOfStock
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_ClothSpool
+	Container			 M4_ManufacturyTable
+	Room				 M4_Manufactury
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 NonCompeting
+	MinSlotId			 5
+	MaxSlotId			 6
+	Condition			 NotLoaded
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_ClothSpool
+	Room				 M4_Manufactury
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 NonCompeting
+	Condition			 NotLoaded
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_RawCotton
+	Container			 M4_TextileMill
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 NonCompeting
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_RawCotton
+	Container			 M4_TextileMill
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+	Distribution		 OutOfStock
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_RawCotton
+	Container			 M4_PlantationTable
+	Room				 M4_CottonPlantation
+	Distribution		 Nearest
+	MinSlotId			 3
+	MaxSlotId			 6
+	Condition			 NotLoaded
+	Properties			 HighPriority
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_RawCotton
+	Room				 M4_CottonPlantation
+	Condition			 NotLoaded
+	Distribution		 Nearest
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_RawCotton
+	Room				 Exports
+	Condition			 NotLoaded
+	Distribution		 Nearest
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+
+### PROCESSORS
+
+
+BEGIN Processor
+	Processor			 M4_ManufacturyTable
+	Input				 None
+	Output				 None
+	OperatingTime		 0
+	Worker				 Prisoner
+	Worker				 M4_Tailor
+END
+
+BEGIN Processor
+	Processor			 M4_PlantationTable
+	Input				 None
+	Output				 None
+	OperatingTime		 0
+	Worker				 Prisoner
+	Worker				 Tailor
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN Processor
+	Processor			 M4_SewingStation
+	Input				 M4_ClothSpool
+	InputCount			 1
+	Output				 M4_Jeans
+	OutputCount			 3
+	OperatingTime		 15.0
+	Object				 M4_SewingStation
+	Worker				 M4_Tailor
+	Worker				 Prisoner
+END
+
+BEGIN Processor
+	Processor			 M4_TextileMill
+	Input				 M4_RawCotton
+	InputCount			 1
+	Output				 M4_ClothSpool
+	OutputCount			 1
+	OperatingTime		 9.0
+	Object				 M4_TextileMill
+	Worker				 M4_Tailor
+	Worker				 Prisoner
+END
+
+
+# store R4_SuperCompost from Recycling 4.0 if available
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 R4_SuperCompost
+	Container			 M4_PlantationControl
+	Distribution		 OutOfStock
+	MinSlotId			 4
+	MaxSlotId			 4
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 R4_SuperCompost
+	Container			 M4_PlantationControl
+	Distribution		 NonCompeting
+	MinSlotId			 4
+	MaxSlotId			 4
+	Worker				 Prisoner
+	Worker				 M4_PlantationWorker
+END
+
+# Store pruned/dead/struck plants in R4_RecycleBin from Recycling 4.0 if available
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonPrunedPlant
+	Container			 R4_RecycleBin
+	MinSlotId			 0
+	MaxSlotId			 7
+	Distribution		 Nearest
+    Properties           HighPriority
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 Workman
+	Worker				 Janitor
+	Worker				 Gardener
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonDeadPlant
+	Container			 R4_RecycleBin
+	MinSlotId			 0
+	MaxSlotId			 7
+	Distribution		 Nearest
+    Properties           HighPriority
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 Workman
+	Worker				 Janitor
+	Worker				 Gardener
+	Worker				 M4_PlantationWorker
+END
+
+BEGIN ProductionRule
+	Rule				 Storage
+	Material			 M4_CottonPlantStruck
+	Container			 R4_RecycleBin
+	MinSlotId			 0
+	MaxSlotId			 7
+	Distribution		 Nearest
+    Properties           HighPriority
+	Condition			 NotLoaded
+	Worker				 Prisoner
+	Worker				 Workman
+	Worker				 Janitor
+	Worker				 Gardener
+	Worker				 M4_PlantationWorker
+END

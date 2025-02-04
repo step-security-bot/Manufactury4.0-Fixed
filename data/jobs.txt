@@ -1,0 +1,117 @@
+
+BEGIN Job
+    Name			 M4_PlantCottonSeed
+    JobTime			 2
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Material		 M4_CottonSeed
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_TendCottonPlant
+    JobTime			 3
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Material		 M4_CottonCompost
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+# use R4_SuperCompost from Recycling 4.0 if available
+BEGIN Job
+    Name			 M4_SuperTendCottonPlant
+    JobTime			 3
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Material		 R4_SuperCompost
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_WaterCottonPlant
+    JobTime			 2
+    Tool			 M4_WateringCan
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_FertilizeCottonPlant
+    JobTime			 2
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Material		 M4_CottonFertilizer
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_DDTCottonPlant
+    JobTime			 2
+    Tool			 M4_DDTSprayer
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Material		 M4_CottonDDT
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_PruneCottonPlant
+    JobTime			 2
+    Tool			 M4_Pruners
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_HarvestCottonPlant
+    JobTime			 3
+	Properties		 HighPriority
+    Tool			 M4_Pruners
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_RemoveDeadCottonPlant
+    JobTime			 1
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_RemoveStruckCottonPlant
+    JobTime			 1
+    Tool			 M4_Trowel
+    Worker			 Prisoner
+    Worker			 M4_PlantationWorker
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END
+
+BEGIN Job
+    Name			 M4_JustATailorDummyJob
+    JobTime			 0
+	Properties		 HighPriority
+    Tool			 Clipboard
+    Worker			 M4_Tailor
+    Qualification	 M4_Plantation
+	WorkGroup		 M4_PlantationGroup
+END

@@ -1,0 +1,28 @@
+
+BEGIN Program
+	Name					 M4_ManufacturyInduction
+	SessionCost				 -100
+	Places					 20
+	SessionLength			 120
+	NumSessions				 2
+	Difficulty				 10
+	Research				 PrisonLabour
+	Room					 M4_Manufactury
+	Teacher					 M4_Tailor
+	Intake					 Voluntary
+	Properties				 Practical
+END
+
+BEGIN Program
+	Name					 M4_Plantation
+	SessionCost				 -100
+	Places					 20
+	SessionLength			 120
+	NumSessions				 2
+	Difficulty				 10
+	Research				 PrisonLabour
+	Room					 M4_CottonPlantation
+	Teacher					 M4_PlantationWorker
+	Intake					 Voluntary
+	Properties				 Practical
+END
